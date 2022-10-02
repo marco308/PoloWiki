@@ -1,0 +1,12 @@
+!*.gitkeep
+.env
+mix-manifest.json
+package-lock.json
+yarn.lock
+node_modules
+public/custom
+resources/scripts/custom.js
+resources/styles/custom.scss
+resources/styles/custom/*.scss
+resources/fonts/*
+!resources/fonts/.gitkeep

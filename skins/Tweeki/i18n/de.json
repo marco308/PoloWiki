@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Thaider",
+			"Kghbln"
+		]
+	},
+	"tweeki-desc": "Eine auf Bootstrap gestützte Benutzeroberfläche",
+	"userpage": "Benutzerseite",
+	"tweeki-edit-ext": "$1 bearbeiten",
+	"tweeki-login": "Anmelden / Registrieren",
+	"prefs-tweeki-advanced": "Erweiterte Funktionen",
+	"prefs-tweeki-advanced-desc": "Erweiterte Funktionen anzeigen",
+	"prefs-tweeki-advanced-help": "Einige Funktionen, die du möglicherweise von anderen Wikis kennst, wurden versteckt, um durchschnittliche Nutzer nicht zu verwirren. Benutze diese Option, um sie anzuzeigen.",
+	"tweeki-toc-top": "nach oben",
+	"tweeki-no-entries": "keine Einträge…"
+}

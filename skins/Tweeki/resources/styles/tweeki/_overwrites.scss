@@ -1,0 +1,531 @@
+
+/**
+ * Grid spacing
+ */
+
+// #contentwrapper {
+//   padding-top: $spacer * 3;
+//   padding-bottom: $spacer * 3;
+//   min-height: 70vh;
+// }
+
+#maincontentwrapper {
+  overflow-wrap:break-word; // headings and content that is to long should break
+}
+
+
+@include media-breakpoint-up(md) {
+  #sidebar {
+    &-right {
+      order:2;
+    }
+    &-left {
+      order:0;
+    }
+  }
+  #maincontentwrapper {
+    order:1;
+  }
+}
+
+.navbar {
+  .form-group {
+    // margin-bottom: 0;
+  }
+
+  .nav.icon {
+    @extend .nav-item;
+  }
+}
+
+
+// #ca-unwatch,
+// #ca-watch {
+//   &.icon a {
+//     width: $spacer;
+//     height: $spacer;
+//     display: inline-block;
+//     background: fuchsia;
+//   }
+// }
+
+html,
+body {
+  scroll-padding-top: 60px;
+}
+
+html {
+  height: 100% !important;
+}
+
+body {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+
+  .formtable {
+    @extend .table;
+  }
+
+  .oo-ui {
+    &-widget-enabled {
+      [type="checkbox"] {
+        &:checked {
+          & + span {
+            background-color: $primary !important;
+            border-color: $primary !important;
+          }
+        }
+      }
+    }
+  }
+
+  .editButtons {
+    .editHelp {
+      margin: $spacer * 0.5 0 $spacer;
+      display: block;
+      width: 100%;
+      font-size: $font-size-sm;
+      color: $gray-600;
+
+      a {
+        font-weight: normal;
+        color: $gray-600;
+        text-decoration: underline;
+
+        &:hover {
+          color: $gray-800;
+        }
+      }
+    }
+  }
+
+
+  /**
+   * Tabs
+   */
+
+  .nav {
+    &-tabs {
+      //
+    }
+  }
+
+
+  /**
+   * Sidebar
+   */
+
+  #sidebar {
+    &-right,
+    &-left {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  main {
+    margin-bottom: $spacer * 3;
+  }
+
+  #content {
+    //padding: 0 $spacer * 2 0 0;
+  }
+
+
+  /**
+   * Cookie Warning
+   */
+  .mw-cookiewarning-container {
+    top:unset;
+    bottom:0;
+    text-align:center;
+  }
+
+  .mw-editsection-bracket {
+    display:none;
+  }
+}
+
+
+
+
+/**
+ * Tweeki Base (less import)
+ */
+
+/**
+ * Tweeki screen styles
+ *
+ * part of this has been taken from Garret LeSage's Strapping
+ */
+
+
+/**
+ * CONTENT
+ */
+
+#content {
+  clear:both;
+  margin-bottom:1em;
+  padding-top:.5em;
+  padding-bottom:1em;
+}
+
+@include media-breakpoint-up(md) {
+  #content {
+    padding:1em 2em;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+  }
+}
+
+
+
+/**
+ * CORRECTION FOR MAIN CONTENT
+ */
+.with-navbar {
+}
+
+.without-navbar {
+  padding-top:20px;
+}
+
+.with-navbar.with-navbar-fixed {
+  padding-top: 60px;
+}
+@media (min-width: 768px) {
+  .with-navbar.with-navbar-fixed {
+    padding-top:100px;
+  }
+}
+
+/* navigation - accessibility */
+#mw-navigation h2 {
+    position: absolute;
+    top: -9999px;
+}
+
+/* image in brand */
+.navbar-brand img {
+  height:40px;
+  margin-top:-10px;
+}
+
+/* correction for searchform in navbar */
+#searchform + .navbar-nav.navbar-right:last-child {
+    margin-right: 0;
+}
+
+/* correction for dropdowns (conflicting with mediawiki.legacy.shared) */
+.mw-content-ltr ul.dropdown-menu {
+  margin: 2px 0 0;
+  padding: 5px 0;
+}
+
+/* correction for selflinks in dropdowns (they're no links actually) */
+.dropdown-menu > li > .selflink {
+  padding: 3px 20px;
+  display: block;
+}
+
+/* correction for uls */
+.mw-content-ltr,
+.mw-content-rtl {
+  .mw-parser-output {
+    > ul {
+      margin: 0.3em 0 0.6em 1.6em;
+    }
+  }
+}
+
+/**
+ * SMALL CORRECTIONS
+ */
+
+/* postedit: would otherwise be hidden behind navbar */
+.postedit {
+  top: 5em !important;
+}
+
+/* editsectionlink: hide brackets */
+.mw-editsection-bracket {
+  display:none;
+}
+
+/* show editsectionlink only on hover */
+.tw-editsection-onhover,
+.tw-editsection-onhover + .mw-editsection-divider {
+  display:none;
+  color:#ccc;
+}
+.tw-editsection-onhover:hover,
+.tw-editsection-onhover:focus {
+  color:#666;
+  text-decoration:none;
+}
+.mw-editsection {
+  vertical-align:middle;
+}
+h1:hover .tw-editsection-onhover,
+h2:hover .tw-editsection-onhover,
+h3:hover .tw-editsection-onhover,
+h4:hover .tw-editsection-onhover,
+h5:hover .tw-editsection-onhover,
+h6:hover .tw-editsection-onhover {
+  display:inline-block;
+}
+h1:hover .tw-editsection-onhover + .mw-editsection-divider,
+h2:hover .tw-editsection-onhover + .mw-editsection-divider,
+h3:hover .tw-editsection-onhover + .mw-editsection-divider,
+h4:hover .tw-editsection-onhover + .mw-editsection-divider,
+h5:hover .tw-editsection-onhover + .mw-editsection-divider,
+h6:hover .tw-editsection-onhover + .mw-editsection-divider {
+  display:inline-block;
+}
+
+/* hide categories */
+#catlinks {
+  display:none;
+}
+
+/* make edit window bigger */
+#wpTextbox1 {
+  width:100%;
+}
+
+.firstHeading,
+.tweekiFirstHeading {
+  text-align:center;
+  margin-bottom:15px;
+  margin-top:10px;
+  font-weight:600;
+  letter-spacing:-.01em;
+}
+
+.firstHeading .namespace {
+  font-weight:300;
+}
+
+/* Hide empty portlets */
+div.emptyPortlet {
+  display: none;
+}
+
+/* Sub-navigation */
+#siteSub {
+  display: none;
+}
+
+#jump-to-nav {
+  display: none;
+}
+
+.mw-body .printfooter {
+  display: none;
+}
+
+label {
+  display:inline-block;
+  margin-bottom:0;
+}
+
+input[type=radio], input[type=checkbox] {
+  margin:-2px 0 0;
+}
+
+label > input[type=checkbox],
+label > input[type=radio] {
+  margin-right:5px;
+  vertical-align:middle;
+}
+
+
+
+#bodyContent {
+  ul {
+    &.card-header-tabs {
+      padding: 0;
+
+      @extend .card-header-tabs;
+    }
+  }
+
+  .card {
+    &-header {
+      position: relative;
+
+      & > h3 {
+        margin-top: $spacer * 2;
+        margin-bottom: $spacer * 2;
+      }
+
+      & > a {
+        @extend .badge;
+        @extend .badge-secondary;
+
+        position: absolute;
+        top: $spacer;
+        left: $spacer;
+        font-weight: normal;
+      }
+    }
+
+    &-body {
+      &-table {
+        margin: 0 $spacer * -1.25;
+
+        .table,
+        .table.table-bordered {
+          border-left: 0;
+          border-right: 0;
+
+          thead,
+          tbody {
+            tr {
+              th,
+              td {
+                &:first-child {
+                  border-left: 0;
+                }
+
+                &:last-child {
+                  border-right: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Body class display classes
+ */
+.tweeki-advanced .d-advanced-none,
+.tweeki-non-advanced .d-non-advanced-none,
+.tweeki-user-logged-in .d-logged-in-none,
+.tweeki-user-logged-in .d-anon,
+.tweeki-user-anon .d-anon-none,
+.tweeki-user-anon .d-logged-in {
+  display:none
+}
+
+
+
+/**
+ * Sticky Sidebar 
+ */
+.sidebar-sticky {
+  position: sticky;
+  top: 80px;
+  z-index: 1;
+}
+
+@include media-breakpoint-up(md) {
+  .sidebar-sticky {
+    height: calc(100vh - 300px);
+  }
+}
+
+/**
+ * EDIT-EXT Dropdown 
+ */
+[name=ca-edit-ext] + .dropdown-toggle {
+  max-width: 40px;
+}
+
+
+/**
+ * Watch/Unwatch Icon Styling 
+ */
+#ca-unwatch.icon a,
+#ca-watch.icon a {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  font-family: "Font Awesome 5 Free";
+  height:40px;
+  width:2.2rem;
+  overflow:hidden;
+}
+.navbar #ca-unwatch.icon a,
+.navbar #ca-watch.icon a {
+  /* should be 1.2em + padding of .navbar-expand-lg .navbar-nav -nav-link */
+  width:2.2rem;
+}
+#ca-unwatch.icon a:before,
+#ca-watch.icon a:before {
+  content: "\f005";
+  /* hide text */
+  padding-right:50em;
+}
+#ca-unwatch.icon a {
+  font-weight: 900;
+}
+#ca-watch.icon a {
+  font-weight: 400;
+}
+#ca-unwatch.icon a.loading,
+#ca-watch.icon a.loading {
+  animation: fa-spin 5s infinite linear;
+}
+
+.mw-content-ltr ul.nav, 
+.mw-content-rtl .mw-content-ltr ul.nav {
+  margin-left:0;
+}
+.mw-content-ltr ul.nav.card-header-tabs, 
+.mw-content-rtl .mw-content-ltr ul.nav.card-header-tabs {
+  margin-right:-.625rem;
+  margin-left:-.625rem;
+  margin-bottom:-.75rem
+}
+
+
+
+#bodyContent ul.select2-choices {
+  padding:0;
+}
+
+
+
+
+
+a.mw-selflink {
+  color: inherit;
+  text-decoration: none;
+
+  @include hover() {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+
+// make mw-collapsible work in card headers
+.card .mw-collapsible-toggle {
+  position:relative;
+  z-index: 1;
+  padding: $card-spacer-y $card-spacer-x;
+}
+
+
+.btn-block + .btn-block.dropdown-toggle {
+  margin-top:0;
+}
+
+
+.tweeki-user-image {
+  border-radius:30px;
+  margin-top:-5px;
+  margin-bottom:-5px;
+}

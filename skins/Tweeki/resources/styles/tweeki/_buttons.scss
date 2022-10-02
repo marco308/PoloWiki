@@ -1,0 +1,98 @@
+input[type=submit], input[type=button] {
+  @extend .btn;
+  @extend .btn-secondary;
+
+  &[name=wpUpload] {
+    @extend .btn-primary;
+  }
+}
+
+// UI buttons (e.g. in the login form)
+#maincontentwrapper {
+  .mw-ui-button.mw-ui-progressive {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+}
+
+/*.btn-default:active,
+.btn-default.active,*/
+input[type=submit]:active, input[type=button]:active,
+input[type=submit].active, input[type=button].active {
+  // @extend .btn;
+  // @extend .btn-secondary;
+}
+
+/*.btn-default {* /
+input[type=submit], input[type=button] {
+  text-shadow: 0 1px 0 #fff;
+  background-image: -webkit-linear-gradient(top, #fff 0%, #e0e0e0 100%);
+  background-image:      -o-linear-gradient(top, #fff 0%, #e0e0e0 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0e0));
+  background-image:         linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe0e0e0', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #dbdbdb;
+  border-color: #ccc;
+}
+/*.btn-default:hover,
+.btn-default:focus {* /
+input[type=submit]:hover, input[type=button]:hover,
+input[type=submit]:focus, input[type=button]:focus {
+  background-color: #e0e0e0;
+  background-position: 0 -15px;
+}
+/*.btn-default:active,
+.btn-default.active {* /
+input[type=submit]:active, input[type=button]:active,
+input[type=submit].active, input[type=button].active {
+  background-color: #e0e0e0;
+  border-color: #dbdbdb;
+}
+/*.btn-default.disabled,
+.btn-default:disabled,
+.btn-default[disabled] {* /
+input[type=submit]:disabled, input[type=button]:disabled,
+input[type=submit].disabled, input[type=button].disabled,
+input[type=submit][disabled], input[type=button][disabled] {
+  background-color: #e0e0e0;
+  background-image: none;
+}
+/**/
+
+
+
+body #contentwrapper #maincontentwrapper {
+  .oo-ui-buttonElement {
+    & > * {
+      font-weight: normal !important;
+    }
+  }
+
+  // Buttons on page edit
+  input.oo-ui-buttonElement-button,
+  button.oo-ui-buttonElement-button {
+    @extend .btn;
+    @extend .btn-primary;
+  }
+
+  // Buttons in preferences (e.g. for changing password)
+  label a.oo-ui-buttonElement-button {
+    @extend .btn;
+    @extend .btn-secondary;
+  }
+
+  // Cancel link on page edit
+  .cancelLink .oo-ui-buttonElement-button {
+    @extend .btn-link;
+
+    &:hover,
+    &:active,
+    &.active,
+    &:focus,
+    &.focus {
+      background-color:transparent;
+    }
+  }
+}
