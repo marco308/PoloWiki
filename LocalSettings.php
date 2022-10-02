@@ -130,9 +130,9 @@ $wgDefaultSkin = 'medik';
 # End of automatically generated settings.
 # Add more configuration options below.
 
-wfLoadExtension( 'VisualEditor' );
+// wfLoadExtension( 'VisualEditor' );
 $wgGroupPermissions['user']['writeapi'] = true;
-wfLoadExtension( 'WikiEditor' );
+// wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'Parsoid', __DIR__ . '/vendor/wikimedia/parsoid/extension.json' );
 
 // $wgVirtualRestConfig['modules']['parsoid']
