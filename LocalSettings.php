@@ -131,3 +131,4 @@ $wgDefaultSkin = 'medik';
 # Add more configuration options below.
 
 // wfLoadExtension( 'VisualEditor' );
+wfLoadExtension( 'WikiEditor' );
