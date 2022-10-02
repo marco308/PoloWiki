@@ -137,3 +137,13 @@ wfLoadExtension( 'Parsoid', __DIR__ . '/vendor/wikimedia/parsoid/extension.json'
 
 // $wgVirtualRestConfig['modules']['parsoid']
 $wgDefaultUserOptions['visualeditor-enable'] = 1;
+
+wfLoadExtension( 'VisualEditor' );
+$wgVisualEditorEnableWikitext = true;
+$wgDefaultUserOptions['visualeditor-newwikitext'] = 1;
+$wgDefaultUserOptions['visualeditor-enable'] = 1;
+$wgDefaultUserOptions['visualeditor-editor'] = 'visualeditor';
+$wgVirtualRestConfig['modules']['parsoid'] = [
+	'forwardCookies' => true,
+	'url' => 'https://polo-media-wiki.herokuapp.com'
+];
