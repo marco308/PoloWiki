@@ -132,6 +132,7 @@ $wgDefaultSkin = 'medik';
 
 // wfLoadExtension( 'VisualEditor' );
 wfLoadExtension( 'WikiEditor' );
+wfLoadExtension( 'Parsoid', __DIR__ . '/vendor/wikimedia/parsoid/extension.json' );
 
 // $wgVirtualRestConfig['modules']['parsoid']
 $wgDefaultUserOptions['visualeditor-enable'] = 1;
