@@ -134,3 +134,4 @@ $wgDefaultSkin = 'medik';
 wfLoadExtension( 'WikiEditor' );
 
 // $wgVirtualRestConfig['modules']['parsoid']
+$wgDefaultUserOptions['visualeditor-enable'] = 1;
