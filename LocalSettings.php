@@ -132,3 +132,5 @@ $wgDefaultSkin = 'medik';
 
 // wfLoadExtension( 'VisualEditor' );
 wfLoadExtension( 'WikiEditor' );
+
+$wgVirtualRestConfig['modules']['parsoid']
